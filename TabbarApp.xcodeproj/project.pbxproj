@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0A325816256815B600441761 /* ProductCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A325815256815B600441761 /* ProductCell.swift */; };
 		0A4314092562C3E400CE7101 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A4314082562C3E400CE7101 /* MainTabBarController.swift */; };
 		0A55E67D2566A824008520BB /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A55E67C2566A824008520BB /* Product.swift */; };
 		0A55E6812566A9C8008520BB /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A55E6802566A9C8008520BB /* HomeController.swift */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0A325815256815B600441761 /* ProductCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCell.swift; sourceTree = "<group>"; };
 		0A4314082562C3E400CE7101 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		0A55E67C2566A824008520BB /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 		0A55E6802566A9C8008520BB /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
@@ -41,6 +43,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0A3258142568158D00441761 /* TableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				0A325815256815B600441761 /* ProductCell.swift */,
+			);
+			path = TableViewCell;
+			sourceTree = "<group>";
+		};
+		0A32581725681C2100441761 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				0A55E6802566A9C8008520BB /* HomeController.swift */,
+				0A4314082562C3E400CE7101 /* MainTabBarController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
 		0A55E6752566A680008520BB /* DataModel */ = {
 			isa = PBXGroup;
 			children = (
@@ -68,11 +87,11 @@
 		0A6FAFAB2560C6410074ABF1 /* TabbarApp */ = {
 			isa = PBXGroup;
 			children = (
+				0A32581725681C2100441761 /* ViewController */,
+				0A3258142568158D00441761 /* TableViewCell */,
 				0A55E6752566A680008520BB /* DataModel */,
-				0A4314082562C3E400CE7101 /* MainTabBarController.swift */,
 				0A6FAFAC2560C6410074ABF1 /* AppDelegate.swift */,
 				0A6FAFAE2560C6410074ABF1 /* SceneDelegate.swift */,
-				0A55E6802566A9C8008520BB /* HomeController.swift */,
 				0A6FAFB22560C6410074ABF1 /* Main.storyboard */,
 				0A6FAFB52560C6420074ABF1 /* Assets.xcassets */,
 				0A6FAFB72560C6420074ABF1 /* LaunchScreen.storyboard */,
@@ -155,6 +174,7 @@
 				0A6FAFAD2560C6410074ABF1 /* AppDelegate.swift in Sources */,
 				0A55E6812566A9C8008520BB /* HomeController.swift in Sources */,
 				0A55E67D2566A824008520BB /* Product.swift in Sources */,
+				0A325816256815B600441761 /* ProductCell.swift in Sources */,
 				0A4314092562C3E400CE7101 /* MainTabBarController.swift in Sources */,
 				0A6FAFAF2560C6410074ABF1 /* SceneDelegate.swift in Sources */,
 			);
