@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0A325816256815B600441761 /* ProductCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A325815256815B600441761 /* ProductCell.swift */; };
+		0A3258192568290800441761 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A3258182568290800441761 /* DetailViewController.swift */; };
 		0A4314092562C3E400CE7101 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A4314082562C3E400CE7101 /* MainTabBarController.swift */; };
 		0A55E67D2566A824008520BB /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A55E67C2566A824008520BB /* Product.swift */; };
 		0A55E6812566A9C8008520BB /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A55E6802566A9C8008520BB /* HomeController.swift */; };
@@ -20,6 +21,7 @@
 
 /* Begin PBXFileReference section */
 		0A325815256815B600441761 /* ProductCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCell.swift; sourceTree = "<group>"; };
+		0A3258182568290800441761 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		0A4314082562C3E400CE7101 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		0A55E67C2566A824008520BB /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 		0A55E6802566A9C8008520BB /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
@@ -54,6 +56,7 @@
 		0A32581725681C2100441761 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				0A3258182568290800441761 /* DetailViewController.swift */,
 				0A55E6802566A9C8008520BB /* HomeController.swift */,
 				0A4314082562C3E400CE7101 /* MainTabBarController.swift */,
 			);
@@ -177,6 +180,7 @@
 				0A325816256815B600441761 /* ProductCell.swift in Sources */,
 				0A4314092562C3E400CE7101 /* MainTabBarController.swift in Sources */,
 				0A6FAFAF2560C6410074ABF1 /* SceneDelegate.swift in Sources */,
+				0A3258192568290800441761 /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

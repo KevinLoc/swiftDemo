@@ -13,10 +13,10 @@ class HomeController: UIViewController, UITableViewDataSource, UITableViewDelega
     @IBOutlet weak var productTableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        productTableView.register(ProductCell.self, forCellReuseIdentifier: "productCell")
+//        productTableView.register(ProductCell.self, forCellReuseIdentifier: "productCell")
         products = [
           Product(name: "Smart apple watch", cellImageName: "Account-on", desc: "phone-fullscreen1"),
-          Product(name: "Smart home", cellImageName: "Fund-on", desc: "phone-fullscreen2"),
+          Product(name: "Smart home", cellImageName: "Funds-on", desc: "phone-fullscreen2"),
           Product(name: "SMRT ", cellImageName: "History-on", desc: "phone-fullscreen3"),
           Product(name: "Bycicle", cellImageName: "Home-on", desc: "phone-fullscreen4")
         ]

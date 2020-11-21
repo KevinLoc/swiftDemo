@@ -206,7 +206,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8So-T6-PDZ">
-                                                    <rect key="frame" x="120" y="56" width="264" height="25"/>
+                                                    <rect key="frame" x="120" y="76" width="264" height="25"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="25" id="aso-gg-Cxm"/>
                                                     </constraints>
@@ -225,7 +225,7 @@
                                                 <constraint firstAttribute="trailingMargin" secondItem="az9-ez-EEA" secondAttribute="trailing" constant="10" id="4sl-H6-4JS"/>
                                                 <constraint firstItem="XJu-mz-y1G" firstAttribute="leading" secondItem="drI-64-23E" secondAttribute="leading" constant="10" id="5gj-i9-ARL"/>
                                                 <constraint firstItem="8So-T6-PDZ" firstAttribute="leading" secondItem="XJu-mz-y1G" secondAttribute="trailing" constant="10" id="6GD-EI-Ulw"/>
-                                                <constraint firstItem="8So-T6-PDZ" firstAttribute="top" secondItem="az9-ez-EEA" secondAttribute="bottom" constant="10" id="7OB-2D-9Zt"/>
+                                                <constraint firstItem="8So-T6-PDZ" firstAttribute="top" secondItem="az9-ez-EEA" secondAttribute="bottom" constant="30" id="7OB-2D-9Zt"/>
                                                 <constraint firstItem="az9-ez-EEA" firstAttribute="leading" secondItem="XJu-mz-y1G" secondAttribute="trailing" constant="10" id="Eq4-BA-tF8"/>
                                                 <constraint firstItem="az9-ez-EEA" firstAttribute="top" secondItem="drI-64-23E" secondAttribute="topMargin" constant="10" id="HPw-xp-JYh"/>
                                                 <constraint firstItem="XJu-mz-y1G" firstAttribute="top" secondItem="drI-64-23E" secondAttribute="top" constant="10" id="RJ7-QW-Pup"/>
@@ -271,7 +271,7 @@
         <!-- -->
         <scene sceneID="Ymy-6u-m2f">
             <objects>
-                <viewController id="vNM-WR-Vwg" sceneMemberID="viewController">
+                <viewController id="vNM-WR-Vwg" customClass="DetailViewController" customModule="TabbarApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="vtP-ux-bKc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -282,11 +282,17 @@
                                 <color key="textColor" red="0.0" green="0.81568627449999997" blue="0.62745098040000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yft-tt-o44">
+                                <rect key="frame" x="10" y="98" width="30" height="30"/>
+                                <state key="normal" title="&lt;"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="4mq-DI-48h" firstAttribute="top" secondItem="MGa-VW-VeK" secondAttribute="top" constant="150" id="9Qf-j4-1YA"/>
+                            <constraint firstItem="yft-tt-o44" firstAttribute="leading" secondItem="MGa-VW-VeK" secondAttribute="leading" constant="10" id="Vec-8D-XaK"/>
                             <constraint firstItem="4mq-DI-48h" firstAttribute="centerX" secondItem="vtP-ux-bKc" secondAttribute="centerX" id="wwl-gT-6Pz"/>
+                            <constraint firstItem="yft-tt-o44" firstAttribute="top" secondItem="MGa-VW-VeK" secondAttribute="top" constant="10" id="x1W-Lu-2Mj"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="MGa-VW-VeK"/>
                     </view>
