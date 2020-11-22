@@ -82,18 +82,167 @@
         <!--Transactions-->
         <scene sceneID="6eD-AI-eCJ">
             <objects>
-                <viewController id="kTU-XE-rcx" sceneMemberID="viewController">
+                <viewController id="kTU-XE-rcx" customClass="TransactionsViewController" customModule="TabbarApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="XPc-Ag-Du0">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aOH-i9-0S7">
+                                <rect key="frame" x="6" y="94" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="40" id="WOT-XC-SH8"/>
+                                </constraints>
+                                <state key="normal" image="Menu"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Transaction history" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eWE-tJ-cDS">
+                                <rect key="frame" x="54" y="94" width="163" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="Av7-Ox-GgC"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OUb-GI-ZCE">
+                                <rect key="frame" x="0.0" y="140" width="414" height="56"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Search transaction name or amount" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="bRN-Iw-K78">
+                                        <rect key="frame" x="8" y="8" width="350" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="Hwd-Wj-oM6"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PO6-5b-aVn">
+                                        <rect key="frame" x="366" y="8" width="40" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="HIM-lP-cZm"/>
+                                            <constraint firstAttribute="width" constant="40" id="n2J-Hf-L0E"/>
+                                        </constraints>
+                                        <state key="normal" image="Filter"/>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="bRN-Iw-K78" firstAttribute="top" secondItem="OUb-GI-ZCE" secondAttribute="top" constant="8" id="8vH-ar-Pio"/>
+                                    <constraint firstItem="PO6-5b-aVn" firstAttribute="leading" secondItem="bRN-Iw-K78" secondAttribute="trailing" constant="8" id="APo-fu-YTx"/>
+                                    <constraint firstAttribute="bottom" secondItem="bRN-Iw-K78" secondAttribute="bottom" constant="8" id="Cwk-Mr-6vF"/>
+                                    <constraint firstAttribute="bottom" secondItem="PO6-5b-aVn" secondAttribute="bottom" constant="8" id="O35-Dk-Pi7"/>
+                                    <constraint firstAttribute="height" constant="56" id="g15-1P-rP8"/>
+                                    <constraint firstItem="bRN-Iw-K78" firstAttribute="leading" secondItem="OUb-GI-ZCE" secondAttribute="leading" constant="8" id="ibL-CZ-c1b"/>
+                                    <constraint firstAttribute="trailing" secondItem="PO6-5b-aVn" secondAttribute="trailing" constant="8" id="mMD-fX-I1E"/>
+                                    <constraint firstItem="PO6-5b-aVn" firstAttribute="top" secondItem="OUb-GI-ZCE" secondAttribute="top" constant="8" id="yZe-WV-4D3"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="PpT-J4-jY0">
+                                <rect key="frame" x="0.0" y="196" width="414" height="617"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="separatorColor" red="0.0" green="0.81568627449999997" blue="0.62745098040000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="transactionCell" rowHeight="100" id="GFV-hf-pJQ" customClass="TransactionCell" customModule="TabbarApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="100"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="GFV-hf-pJQ" id="Qn0-cs-dxW">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="weh-v3-ibP">
+                                                    <rect key="frame" x="16" y="34" width="32" height="32"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="32" id="Cce-J2-4c1"/>
+                                                        <constraint firstAttribute="width" constant="32" id="sQb-KS-jiC"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qLL-21-2rQ">
+                                                    <rect key="frame" x="64" y="21" width="100" height="18"/>
+                                                    <attributedString key="attributedText">
+                                                        <fragment content="titleTransaction">
+                                                            <attributes>
+                                                                <font key="NSFont" size="16" name=".SFNSText"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                    </attributedString>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cIA-0q-PHA">
+                                                    <rect key="frame" x="64" y="49" width="78" height="14"/>
+                                                    <attributedString key="attributedText">
+                                                        <fragment content="descTransaction">
+                                                            <attributes>
+                                                                <font key="NSFont" size="12" name=".SFNSText"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                    </attributedString>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fhd-6W-Zhr">
+                                                    <rect key="frame" x="64" y="71" width="101" height="21"/>
+                                                    <attributedString key="attributedText">
+                                                        <fragment content="bankAccount">
+                                                            <attributes>
+                                                                <font key="NSFont" size="12" name=".AppleSystemUIFont"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                    </attributedString>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="weh-v3-ibP" firstAttribute="centerY" secondItem="Qn0-cs-dxW" secondAttribute="centerY" id="3WN-tO-Hq7"/>
+                                                <constraint firstItem="Fhd-6W-Zhr" firstAttribute="leading" secondItem="cIA-0q-PHA" secondAttribute="leading" id="6Fo-Bz-cLS"/>
+                                                <constraint firstItem="weh-v3-ibP" firstAttribute="leading" secondItem="Qn0-cs-dxW" secondAttribute="leading" constant="16" id="76D-ir-2C7"/>
+                                                <constraint firstItem="qLL-21-2rQ" firstAttribute="top" secondItem="Qn0-cs-dxW" secondAttribute="topMargin" constant="10" id="QzX-tL-QL6"/>
+                                                <constraint firstItem="Fhd-6W-Zhr" firstAttribute="top" secondItem="cIA-0q-PHA" secondAttribute="bottom" constant="10" id="W8T-zn-M0Z"/>
+                                                <constraint firstItem="qLL-21-2rQ" firstAttribute="leading" secondItem="weh-v3-ibP" secondAttribute="trailing" constant="16" id="gBT-uO-qac"/>
+                                                <constraint firstItem="cIA-0q-PHA" firstAttribute="top" secondItem="qLL-21-2rQ" secondAttribute="bottom" constant="10" id="qBH-WD-f6A"/>
+                                                <constraint firstItem="cIA-0q-PHA" firstAttribute="leading" secondItem="weh-v3-ibP" secondAttribute="trailing" constant="16" id="qqa-dH-X4T"/>
+                                                <constraint firstItem="Fhd-6W-Zhr" firstAttribute="centerX" secondItem="qLL-21-2rQ" secondAttribute="centerX" id="yAk-3B-9RQ"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="tranBank" destination="Fhd-6W-Zhr" id="ox0-Zb-CUa"/>
+                                            <outlet property="tranDesc" destination="cIA-0q-PHA" id="A3n-Vj-NdL"/>
+                                            <outlet property="tranIcon" destination="weh-v3-ibP" id="sjU-vy-rvw"/>
+                                            <outlet property="tranLable" destination="qLL-21-2rQ" id="zBy-KW-T83"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="kTU-XE-rcx" id="AFt-Ss-fJp"/>
+                                    <outlet property="delegate" destination="kTU-XE-rcx" id="YD8-1I-K7r"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="aOH-i9-0S7" firstAttribute="top" secondItem="iTV-cb-i80" secondAttribute="top" constant="6" id="4PM-cM-DYO"/>
+                            <constraint firstItem="iTV-cb-i80" firstAttribute="bottom" secondItem="PpT-J4-jY0" secondAttribute="bottom" id="55c-xz-Gtj"/>
+                            <constraint firstItem="PpT-J4-jY0" firstAttribute="leading" secondItem="iTV-cb-i80" secondAttribute="leading" id="5Yt-SU-yTr"/>
+                            <constraint firstItem="OUb-GI-ZCE" firstAttribute="leading" secondItem="iTV-cb-i80" secondAttribute="leading" id="8d5-bF-ZAc"/>
+                            <constraint firstItem="OUb-GI-ZCE" firstAttribute="top" secondItem="aOH-i9-0S7" secondAttribute="bottom" constant="6" id="Ah0-uR-koK"/>
+                            <constraint firstItem="iTV-cb-i80" firstAttribute="trailing" secondItem="OUb-GI-ZCE" secondAttribute="trailing" id="IHM-7h-33i"/>
+                            <constraint firstItem="aOH-i9-0S7" firstAttribute="leading" secondItem="iTV-cb-i80" secondAttribute="leading" constant="6" id="NC4-CM-g7z"/>
+                            <constraint firstItem="iTV-cb-i80" firstAttribute="trailing" secondItem="OUb-GI-ZCE" secondAttribute="trailing" id="SvS-qR-vwL"/>
+                            <constraint firstItem="eWE-tJ-cDS" firstAttribute="leading" secondItem="aOH-i9-0S7" secondAttribute="trailing" constant="8" id="atD-fI-GLL"/>
+                            <constraint firstItem="iTV-cb-i80" firstAttribute="trailing" secondItem="OUb-GI-ZCE" secondAttribute="trailing" id="ea0-Vx-ea3"/>
+                            <constraint firstItem="PpT-J4-jY0" firstAttribute="top" secondItem="OUb-GI-ZCE" secondAttribute="bottom" id="fg9-Xq-1dJ"/>
+                            <constraint firstItem="iTV-cb-i80" firstAttribute="trailing" secondItem="PpT-J4-jY0" secondAttribute="trailing" id="iFg-Zb-aWX"/>
+                            <constraint firstItem="eWE-tJ-cDS" firstAttribute="top" secondItem="iTV-cb-i80" secondAttribute="top" constant="6" id="lFd-ie-Z2H"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="iTV-cb-i80"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Transactions" image="History-off" selectedImage="History-on" id="AXG-er-AqQ"/>
+                    <connections>
+                        <outlet property="searchTextfield" destination="bRN-Iw-K78" id="Hxd-mT-qdv"/>
+                        <outlet property="transactionTableView" destination="PpT-J4-jY0" id="RvM-RX-1Xb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZPz-Xb-q9a" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-414" y="944"/>
+            <point key="canvasLocation" x="-414.49275362318843" y="943.52678571428567"/>
         </scene>
         <!--Accounts-->
         <scene sceneID="BGX-vh-VXx">
@@ -325,11 +474,13 @@
     <resources>
         <image name="Account-off" width="40" height="40"/>
         <image name="Account-on" width="40" height="40"/>
+        <image name="Filter" width="40" height="40"/>
         <image name="Funds-off" width="40" height="40"/>
         <image name="Funds-on" width="40" height="40"/>
         <image name="History-off" width="40" height="40"/>
         <image name="History-on" width="40" height="40"/>
         <image name="Home-off" width="40" height="40"/>
         <image name="Home-on" width="40" height="40"/>
+        <image name="Menu" width="40" height="40"/>
     </resources>
 </document>

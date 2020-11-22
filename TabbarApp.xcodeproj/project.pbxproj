@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0A0660FE25695D9D00A9B4D5 /* TransactionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A0660FD25695D9D00A9B4D5 /* TransactionsViewController.swift */; };
+		0A06610025696B5900A9B4D5 /* TransactionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A0660FF25696B5900A9B4D5 /* TransactionCell.swift */; };
 		0A325816256815B600441761 /* ProductCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A325815256815B600441761 /* ProductCell.swift */; };
 		0A3258192568290800441761 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A3258182568290800441761 /* DetailViewController.swift */; };
 		0A4314092562C3E400CE7101 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A4314082562C3E400CE7101 /* MainTabBarController.swift */; };
@@ -20,6 +22,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0A0660FD25695D9D00A9B4D5 /* TransactionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsViewController.swift; sourceTree = "<group>"; };
+		0A0660FF25696B5900A9B4D5 /* TransactionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionCell.swift; sourceTree = "<group>"; };
 		0A325815256815B600441761 /* ProductCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCell.swift; sourceTree = "<group>"; };
 		0A3258182568290800441761 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		0A4314082562C3E400CE7101 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
@@ -49,6 +53,7 @@
 			isa = PBXGroup;
 			children = (
 				0A325815256815B600441761 /* ProductCell.swift */,
+				0A0660FF25696B5900A9B4D5 /* TransactionCell.swift */,
 			);
 			path = TableViewCell;
 			sourceTree = "<group>";
@@ -56,6 +61,7 @@
 		0A32581725681C2100441761 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				0A0660FD25695D9D00A9B4D5 /* TransactionsViewController.swift */,
 				0A3258182568290800441761 /* DetailViewController.swift */,
 				0A55E6802566A9C8008520BB /* HomeController.swift */,
 				0A4314082562C3E400CE7101 /* MainTabBarController.swift */,
@@ -177,9 +183,11 @@
 				0A6FAFAD2560C6410074ABF1 /* AppDelegate.swift in Sources */,
 				0A55E6812566A9C8008520BB /* HomeController.swift in Sources */,
 				0A55E67D2566A824008520BB /* Product.swift in Sources */,
+				0A06610025696B5900A9B4D5 /* TransactionCell.swift in Sources */,
 				0A325816256815B600441761 /* ProductCell.swift in Sources */,
 				0A4314092562C3E400CE7101 /* MainTabBarController.swift in Sources */,
 				0A6FAFAF2560C6410074ABF1 /* SceneDelegate.swift in Sources */,
+				0A0660FE25695D9D00A9B4D5 /* TransactionsViewController.swift in Sources */,
 				0A3258192568290800441761 /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
