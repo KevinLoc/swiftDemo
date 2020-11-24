@@ -33,6 +33,15 @@ class TransactionsViewController: UIViewController, UITableViewDataSource, UITab
         textField.leftViewMode = .always
     }
     
+    func addBorderBottomView (view : UIView) -> CALayer{
+        let border = CALayer()
+        let width = CGFloat(1.0)
+        border.borderColor = UIColor.green.cgColor
+        border.frame = CGRect(x: 0, y: view.frame.size.height - width, width:  view.frame.size.width, height: 1)
+        border.borderWidth = width
+        return border
+    }
+    
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 100
     }
@@ -44,14 +53,8 @@ class TransactionsViewController: UIViewController, UITableViewDataSource, UITab
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let itemCell = tableView.dequeueReusableCell(withIdentifier: "transactionCell") as! TransactionCell
         itemCell.initTransactionCell(tranTitle: listTransaction?[indexPath.row] ?? "No Title", tranDesc:  listTransaction?[indexPath.row] ?? "No Desc", tranBank:  "No description1", tranIcon: "Health&Fit")
-        
-        let border = CALayer()
-        let width = CGFloat(1.0)
-        border.borderColor = UIColor.green.cgColor
-        border.frame = CGRect(x: 0, y: itemCell.frame.size.height - width, width:  itemCell.frame.size.width, height: 1)
-        border.borderWidth = width
-        itemCell.layer.addSublayer(border)
-        
+        let borderBotom = self.addBorderBottomView(view: itemCell)
+        itemCell.layer.addSublayer(borderBotom)
         return itemCell;
     }
 

@@ -9,10 +9,11 @@
 import UIKit
 
 class DetailViewController: UIViewController {
-
+    @IBOutlet weak var titleTransactionLabel: UILabel!
+    var titleTransaction: String?
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+//        titleTransactionLabel.text = titleTransaction
         // Do any additional setup after loading the view.
     }
     

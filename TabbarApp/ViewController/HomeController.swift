@@ -25,10 +25,23 @@ class HomeController: UIViewController, UITableViewDataSource, UITableViewDelega
         return (products != nil) ? products!.count : 0
     }
     
+    @IBAction func openDetailTransaction(_ sender: Any) {
+        print("go to detail")
+        let titleDetail = "Hello "
+        let storyBoard: UIStoryboard = UIStoryboard(name: "DetailTransaction", bundle: nil)
+        let detailViewController = storyBoard.instantiateViewController(withIdentifier: "detailTransactionVC") as! DetailViewController
+//        detailViewController.titleTransaction = titleDetail
+        self.navigationController?.pushViewController(detailViewController, animated: true)
+    }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let itemCell = tableView.dequeueReusableCell(withIdentifier: "productCell") as! ProductCell
         itemCell.initProductCell(product: products![indexPath.row])
         return itemCell;
     }
 
+  
+    
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        
+//    }
 }

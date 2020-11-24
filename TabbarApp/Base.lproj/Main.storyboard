@@ -207,6 +207,7 @@
                                             <outlet property="tranDesc" destination="cIA-0q-PHA" id="A3n-Vj-NdL"/>
                                             <outlet property="tranIcon" destination="weh-v3-ibP" id="sjU-vy-rvw"/>
                                             <outlet property="tranLable" destination="qLL-21-2rQ" id="zBy-KW-T83"/>
+                                            <segue destination="Ytk-Ko-DNx" kind="show" identifier="openDetailTransaction" id="FZg-gY-FTO"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -234,7 +235,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="iTV-cb-i80"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Transactions" image="History-off" selectedImage="History-on" id="AXG-er-AqQ"/>
+                    <tabBarItem key="tabBarItem" title="Transactions" image="History-off" selectedImage="History-on" id="AXG-er-AqQ">
+                        <color key="badgeColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBarItem>
                     <connections>
                         <outlet property="searchTextfield" destination="bRN-Iw-K78" id="Hxd-mT-qdv"/>
                         <outlet property="transactionTableView" destination="PpT-J4-jY0" id="RvM-RX-1Xb"/>
@@ -269,6 +272,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
                         <segue destination="Ofh-VS-lqj" kind="relationship" relationship="viewControllers" id="HIo-1K-EzM"/>
@@ -312,14 +316,14 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QsO-zE-6k7">
-                                <rect key="frame" x="171" y="746" width="72" height="47"/>
+                                <rect key="frame" x="20" y="746" width="374" height="47"/>
                                 <color key="backgroundColor" red="0.0" green="0.81568627449999997" blue="0.62745098040000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="29"/>
                                 <state key="normal" title="Detail">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="vNM-WR-Vwg" kind="show" id="ta9-HA-uyd"/>
+                                    <action selector="openDetailTransaction:" destination="Ofh-VS-lqj" eventType="touchUpInside" id="kLx-1I-ZVH"/>
                                 </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="58P-cK-ESt">
@@ -398,6 +402,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="EHP-7f-6zM" firstAttribute="centerX" secondItem="RWf-98-yJq" secondAttribute="centerX" id="19f-kK-CNg"/>
+                            <constraint firstItem="QsO-zE-6k7" firstAttribute="leading" secondItem="ZQM-er-VKD" secondAttribute="leading" constant="20" id="1Zy-Cy-MSV"/>
                             <constraint firstItem="QsO-zE-6k7" firstAttribute="centerX" secondItem="RWf-98-yJq" secondAttribute="centerX" id="8aD-39-6p6"/>
                             <constraint firstItem="ZQM-er-VKD" firstAttribute="trailing" secondItem="58P-cK-ESt" secondAttribute="trailing" id="BUC-JC-OoG"/>
                             <constraint firstItem="EHP-7f-6zM" firstAttribute="top" secondItem="ZQM-er-VKD" secondAttribute="top" constant="40" id="BpW-I1-cwv"/>
@@ -405,6 +410,7 @@
                             <constraint firstItem="58P-cK-ESt" firstAttribute="top" secondItem="EHP-7f-6zM" secondAttribute="bottom" constant="20" id="Nma-6P-6Tl"/>
                             <constraint firstItem="58P-cK-ESt" firstAttribute="leading" secondItem="ZQM-er-VKD" secondAttribute="leading" id="YWB-I9-Hlr"/>
                             <constraint firstItem="ZQM-er-VKD" firstAttribute="bottom" secondItem="QsO-zE-6k7" secondAttribute="bottom" constant="20" id="f97-13-HJJ"/>
+                            <constraint firstItem="ZQM-er-VKD" firstAttribute="trailing" secondItem="QsO-zE-6k7" secondAttribute="trailing" constant="20" id="nrf-4c-gy3"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ZQM-er-VKD"/>
                     </view>
@@ -417,39 +423,15 @@
             </objects>
             <point key="canvasLocation" x="-1486.9565217391305" y="943.52678571428567"/>
         </scene>
-        <!-- -->
-        <scene sceneID="Ymy-6u-m2f">
+        <!--detailTransactionVC-->
+        <scene sceneID="K0E-Kr-nHq">
             <objects>
-                <viewController id="vNM-WR-Vwg" customClass="DetailViewController" customModule="TabbarApp" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="vtP-ux-bKc">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Detail transaction" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4mq-DI-48h">
-                                <rect key="frame" x="84" y="238" width="246.5" height="39.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="33"/>
-                                <color key="textColor" red="0.0" green="0.81568627449999997" blue="0.62745098040000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yft-tt-o44">
-                                <rect key="frame" x="10" y="98" width="30" height="30"/>
-                                <state key="normal" title="&lt;"/>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <constraints>
-                            <constraint firstItem="4mq-DI-48h" firstAttribute="top" secondItem="MGa-VW-VeK" secondAttribute="top" constant="150" id="9Qf-j4-1YA"/>
-                            <constraint firstItem="yft-tt-o44" firstAttribute="leading" secondItem="MGa-VW-VeK" secondAttribute="leading" constant="10" id="Vec-8D-XaK"/>
-                            <constraint firstItem="4mq-DI-48h" firstAttribute="centerX" secondItem="vtP-ux-bKc" secondAttribute="centerX" id="wwl-gT-6Pz"/>
-                            <constraint firstItem="yft-tt-o44" firstAttribute="top" secondItem="MGa-VW-VeK" secondAttribute="top" constant="10" id="x1W-Lu-2Mj"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="MGa-VW-VeK"/>
-                    </view>
-                    <navigationItem key="navigationItem" title=" " id="hai-xE-C7B"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="8oT-VV-uRM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pxd-wI-dT8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <viewControllerPlaceholder storyboardName="DetailTransaction" referencedIdentifier="detailTransactionVC" id="Ytk-Ko-DNx" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="3VP-ni-jlq"/>
+                </viewControllerPlaceholder>
             </objects>
-            <point key="canvasLocation" x="-1517" y="1767"/>
+            <point key="canvasLocation" x="-1486" y="1369"/>
         </scene>
         <!--Item-->
         <scene sceneID="Oqx-NG-rbE">
