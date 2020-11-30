@@ -22,7 +22,11 @@ class HomeController: UIViewController, UITableViewDataSource, UITableViewDelega
         ]
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return (products != nil) ? products!.count : 0
+        return  products!.count 
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 100
     }
     
     @IBAction func openDetailTransaction(_ sender: Any) {
@@ -30,7 +34,7 @@ class HomeController: UIViewController, UITableViewDataSource, UITableViewDelega
         let titleDetail = "Hello "
         let storyBoard: UIStoryboard = UIStoryboard(name: "DetailTransaction", bundle: nil)
         let detailViewController = storyBoard.instantiateViewController(withIdentifier: "detailTransactionVC") as! DetailViewController
-//        detailViewController.titleTransaction = titleDetail
+        detailViewController.titleTransaction = titleDetail
         self.navigationController?.pushViewController(detailViewController, animated: true)
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

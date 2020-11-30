@@ -9,11 +9,12 @@
 import UIKit
 
 class DetailViewController: UIViewController {
+    
     @IBOutlet weak var titleTransactionLabel: UILabel!
-    var titleTransaction: String?
+    var titleTransaction: String!
     override func viewDidLoad() {
         super.viewDidLoad()
-//        titleTransactionLabel.text = titleTransaction
+        titleTransactionLabel?.text = titleTransaction
         // Do any additional setup after loading the view.
     }
     
@@ -23,14 +24,9 @@ class DetailViewController: UIViewController {
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func goBackHomeController(_ sender: Any) {
+        _ = navigationController?.popViewController(animated: true)
     }
-    */
+    
 
 }

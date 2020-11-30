@@ -123,7 +123,7 @@
                                         <state key="normal" image="Filter"/>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstItem="bRN-Iw-K78" firstAttribute="top" secondItem="OUb-GI-ZCE" secondAttribute="top" constant="8" id="8vH-ar-Pio"/>
                                     <constraint firstItem="PO6-5b-aVn" firstAttribute="leading" secondItem="bRN-Iw-K78" secondAttribute="trailing" constant="8" id="APo-fu-YTx"/>
@@ -140,7 +140,7 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <color key="separatorColor" red="0.0" green="0.81568627449999997" blue="0.62745098040000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="transactionCell" rowHeight="100" id="GFV-hf-pJQ" customClass="TransactionCell" customModule="TabbarApp" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="transactionCell" rowHeight="100" id="GFV-hf-pJQ" customClass="TransactionCell" customModule="TabbarApp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="100"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="GFV-hf-pJQ" id="Qn0-cs-dxW">
@@ -207,7 +207,6 @@
                                             <outlet property="tranDesc" destination="cIA-0q-PHA" id="A3n-Vj-NdL"/>
                                             <outlet property="tranIcon" destination="weh-v3-ibP" id="sjU-vy-rvw"/>
                                             <outlet property="tranLable" destination="qLL-21-2rQ" id="zBy-KW-T83"/>
-                                            <segue destination="Ytk-Ko-DNx" kind="show" identifier="openDetailTransaction" id="FZg-gY-FTO"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -326,7 +325,7 @@
                                     <action selector="openDetailTransaction:" destination="Ofh-VS-lqj" eventType="touchUpInside" id="kLx-1I-ZVH"/>
                                 </connections>
                             </button>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="58P-cK-ESt">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="58P-cK-ESt">
                                 <rect key="frame" x="0.0" y="186.5" width="414" height="539.5"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
@@ -359,10 +358,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8So-T6-PDZ">
-                                                    <rect key="frame" x="120" y="76" width="264" height="25"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="25" id="aso-gg-Cxm"/>
-                                                    </constraints>
+                                                    <rect key="frame" x="120" y="58.5" width="264" height="20.5"/>
                                                     <attributedString key="attributedText">
                                                         <fragment content="descProduct">
                                                             <attributes>
@@ -377,13 +373,13 @@
                                             <constraints>
                                                 <constraint firstAttribute="trailingMargin" secondItem="az9-ez-EEA" secondAttribute="trailing" constant="10" id="4sl-H6-4JS"/>
                                                 <constraint firstItem="XJu-mz-y1G" firstAttribute="leading" secondItem="drI-64-23E" secondAttribute="leading" constant="10" id="5gj-i9-ARL"/>
-                                                <constraint firstItem="8So-T6-PDZ" firstAttribute="leading" secondItem="XJu-mz-y1G" secondAttribute="trailing" constant="10" id="6GD-EI-Ulw"/>
-                                                <constraint firstItem="8So-T6-PDZ" firstAttribute="top" secondItem="az9-ez-EEA" secondAttribute="bottom" constant="30" id="7OB-2D-9Zt"/>
                                                 <constraint firstItem="az9-ez-EEA" firstAttribute="leading" secondItem="XJu-mz-y1G" secondAttribute="trailing" constant="10" id="Eq4-BA-tF8"/>
                                                 <constraint firstItem="az9-ez-EEA" firstAttribute="top" secondItem="drI-64-23E" secondAttribute="topMargin" constant="10" id="HPw-xp-JYh"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="8So-T6-PDZ" secondAttribute="trailing" constant="10" id="KX5-kb-lJV"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="8So-T6-PDZ" secondAttribute="bottom" constant="10" id="QEc-NK-75n"/>
                                                 <constraint firstItem="XJu-mz-y1G" firstAttribute="top" secondItem="drI-64-23E" secondAttribute="top" constant="10" id="RJ7-QW-Pup"/>
+                                                <constraint firstItem="8So-T6-PDZ" firstAttribute="leading" secondItem="XJu-mz-y1G" secondAttribute="trailing" constant="10" id="bMS-ez-Es6"/>
                                                 <constraint firstAttribute="bottom" secondItem="XJu-mz-y1G" secondAttribute="bottom" constant="10" id="bxf-se-6fz"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="8So-T6-PDZ" secondAttribute="trailing" constant="10" id="mNl-cC-srb"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
@@ -426,10 +422,10 @@
         <!--detailTransactionVC-->
         <scene sceneID="K0E-Kr-nHq">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="pxd-wI-dT8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewControllerPlaceholder storyboardName="DetailTransaction" referencedIdentifier="detailTransactionVC" id="Ytk-Ko-DNx" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="3VP-ni-jlq"/>
                 </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pxd-wI-dT8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1486" y="1369"/>
         </scene>

@@ -18,6 +18,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LC1-RP-Xhy">
                                 <rect key="frame" x="14" y="58" width="40" height="40"/>
                                 <state key="normal" backgroundImage="Close"/>
+                                <connections>
+                                    <action selector="goBackHomeController:" destination="OSa-Fb-zeu" eventType="touchUpInside" id="vjm-bp-JSa"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I've made an" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="goe-HK-eGc">
                                 <rect key="frame" x="20" y="106" width="91" height="19.5"/>
@@ -25,33 +28,26 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="asY-QL-WQ2">
-                                <rect key="frame" x="500" y="145.5" width="414" height="716.5"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="View 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sk2-fa-Uk8">
-                                        <rect key="frame" x="34" y="51" width="49" height="21"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E54-hz-MtZ">
+                                <rect key="frame" x="44" y="233" width="195" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="LC1-RP-Xhy" firstAttribute="top" secondItem="l4o-4v-K3H" secondAttribute="topMargin" constant="14" id="8j4-kb-7T6"/>
-                            <constraint firstItem="KIj-DD-GeZ" firstAttribute="trailing" secondItem="asY-QL-WQ2" secondAttribute="trailing" id="KBa-fY-UfP"/>
                             <constraint firstItem="goe-HK-eGc" firstAttribute="leading" secondItem="KIj-DD-GeZ" secondAttribute="leading" constant="20" id="R6O-5t-2rV"/>
-                            <constraint firstItem="asY-QL-WQ2" firstAttribute="leading" secondItem="KIj-DD-GeZ" secondAttribute="leading" id="VF5-We-fiY"/>
-                            <constraint firstItem="asY-QL-WQ2" firstAttribute="top" secondItem="goe-HK-eGc" secondAttribute="bottom" constant="20" id="auz-nf-uxg"/>
                             <constraint firstItem="goe-HK-eGc" firstAttribute="top" secondItem="LC1-RP-Xhy" secondAttribute="bottom" constant="8" id="mOR-lP-peY"/>
-                            <constraint firstItem="KIj-DD-GeZ" firstAttribute="bottom" secondItem="asY-QL-WQ2" secondAttribute="bottom" id="upO-ze-dQ0"/>
                             <constraint firstItem="LC1-RP-Xhy" firstAttribute="leading" secondItem="KIj-DD-GeZ" secondAttribute="leading" constant="14" id="vKi-CK-UbD"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="KIj-DD-GeZ"/>
                     </view>
+                    <connections>
+                        <outlet property="titleTransactionLabel" destination="E54-hz-MtZ" id="e61-T3-54r"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="n5R-k9-0Cr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

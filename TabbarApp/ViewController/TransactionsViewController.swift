@@ -57,5 +57,19 @@ class TransactionsViewController: UIViewController, UITableViewDataSource, UITab
         itemCell.layer.addSublayer(borderBotom)
         return itemCell;
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.cellForRow(at: indexPath)?.backgroundColor = .lightGray
+        DispatchQueue.main.asyncAfter(deadline: .now()) {
+            UIView.animate(withDuration: 0.5, animations: {
+                tableView.cellForRow(at: indexPath)?.backgroundColor = .none
+            })
+        }
+        let titleDetail = "Hello " + String(indexPath.row)
+        let storyBoard: UIStoryboard = UIStoryboard(name: "DetailTransaction", bundle: nil)
+        let detailViewController = storyBoard.instantiateViewController(withIdentifier: "detailTransactionVC") as! DetailViewController
+        detailViewController.titleTransaction = titleDetail
+        self.navigationController?.pushViewController(detailViewController, animated: true)
+    }
 
 }
