@@ -20,6 +20,9 @@
 		0A6FAFB42560C6410074ABF1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A6FAFB22560C6410074ABF1 /* Main.storyboard */; };
 		0A6FAFB62560C6420074ABF1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0A6FAFB52560C6420074ABF1 /* Assets.xcassets */; };
 		0A6FAFB92560C6420074ABF1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A6FAFB72560C6420074ABF1 /* LaunchScreen.storyboard */; };
+		0A79777A2574A01F00135C8B /* AccountView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A7977792574A01F00135C8B /* AccountView.xib */; };
+		0A79777C2574A0F100135C8B /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A79777B2574A0F100135C8B /* AccountViewController.swift */; };
+		0A79777E2574D0F900135C8B /* AccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A79777D2574D0F900135C8B /* AccountView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +41,9 @@
 		0A6FAFB52560C6420074ABF1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0A6FAFB82560C6420074ABF1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0A6FAFBA2560C6420074ABF1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0A7977792574A01F00135C8B /* AccountView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AccountView.xib; sourceTree = "<group>"; };
+		0A79777B2574A0F100135C8B /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
+		0A79777D2574D0F900135C8B /* AccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,10 +69,12 @@
 		0A32581725681C2100441761 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				0A79777825749FDE00135C8B /* AccountTabViewController */,
 				0A550910256C028D00724695 /* TransactionController */,
 				0A0660FD25695D9D00A9B4D5 /* TransactionsViewController.swift */,
 				0A55E6802566A9C8008520BB /* HomeController.swift */,
 				0A4314082562C3E400CE7101 /* MainTabBarController.swift */,
+				0A79777B2574A0F100135C8B /* AccountViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -118,6 +126,15 @@
 				0A6FAFBA2560C6420074ABF1 /* Info.plist */,
 			);
 			path = TabbarApp;
+			sourceTree = "<group>";
+		};
+		0A79777825749FDE00135C8B /* AccountTabViewController */ = {
+			isa = PBXGroup;
+			children = (
+				0A7977792574A01F00135C8B /* AccountView.xib */,
+				0A79777D2574D0F900135C8B /* AccountView.swift */,
+			);
+			path = AccountTabViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -180,6 +197,7 @@
 			files = (
 				0A6FAFB92560C6420074ABF1 /* LaunchScreen.storyboard in Resources */,
 				0A6FAFB62560C6420074ABF1 /* Assets.xcassets in Resources */,
+				0A79777A2574A01F00135C8B /* AccountView.xib in Resources */,
 				0A6FAFB42560C6410074ABF1 /* Main.storyboard in Resources */,
 				0A550912256C02B500724695 /* DetailTransaction.storyboard in Resources */,
 			);
@@ -196,8 +214,10 @@
 				0A55E6812566A9C8008520BB /* HomeController.swift in Sources */,
 				0A55E67D2566A824008520BB /* Product.swift in Sources */,
 				0A06610025696B5900A9B4D5 /* TransactionCell.swift in Sources */,
+				0A79777E2574D0F900135C8B /* AccountView.swift in Sources */,
 				0A325816256815B600441761 /* ProductCell.swift in Sources */,
 				0A4314092562C3E400CE7101 /* MainTabBarController.swift in Sources */,
+				0A79777C2574A0F100135C8B /* AccountViewController.swift in Sources */,
 				0A6FAFAF2560C6410074ABF1 /* SceneDelegate.swift in Sources */,
 				0A0660FE25695D9D00A9B4D5 /* TransactionsViewController.swift in Sources */,
 				0A3258192568290800441761 /* DetailViewController.swift in Sources */,

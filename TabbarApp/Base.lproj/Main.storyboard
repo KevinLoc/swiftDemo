@@ -123,7 +123,7 @@
                                         <state key="normal" image="Filter"/>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstItem="bRN-Iw-K78" firstAttribute="top" secondItem="OUb-GI-ZCE" secondAttribute="top" constant="8" id="8vH-ar-Pio"/>
                                     <constraint firstItem="PO6-5b-aVn" firstAttribute="leading" secondItem="bRN-Iw-K78" secondAttribute="trailing" constant="8" id="APo-fu-YTx"/>
@@ -249,18 +249,63 @@
         <!--Accounts-->
         <scene sceneID="BGX-vh-VXx">
             <objects>
-                <viewController id="bmj-Q5-brL" sceneMemberID="viewController">
+                <viewController id="bmj-Q5-brL" customClass="AccountViewController" customModule="TabbarApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ZJc-WL-7oy">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Account screen" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eLx-Kj-cQQ">
+                                <rect key="frame" x="0.0" y="108" width="414" height="32"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fRv-eX-X9f">
+                                <rect key="frame" x="10" y="160" width="72" height="30"/>
+                                <state key="normal" title="My entries"/>
+                                <connections>
+                                    <action selector="selectView1:" destination="bmj-Q5-brL" eventType="touchUpInside" id="iMH-UO-mnR"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XaF-rq-oey">
+                                <rect key="frame" x="102" y="160" width="94" height="30"/>
+                                <state key="normal" title="Bank account"/>
+                                <connections>
+                                    <action selector="selectView2:" destination="bmj-Q5-brL" eventType="touchUpInside" id="G2U-mK-nrA"/>
+                                </connections>
+                            </button>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" pagingEnabled="YES" translatesAutoresizingMaskIntoConstraints="NO" id="f7h-3K-KmN">
+                                <rect key="frame" x="0.0" y="210" width="414" height="603"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <viewLayoutGuide key="contentLayoutGuide" id="Obt-W7-dge"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="sGD-4y-a5a"/>
+                            </scrollView>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="fRv-eX-X9f" firstAttribute="leading" secondItem="HEq-Do-qGv" secondAttribute="leading" constant="10" id="3f7-sR-tAN"/>
+                            <constraint firstItem="eLx-Kj-cQQ" firstAttribute="top" secondItem="HEq-Do-qGv" secondAttribute="top" constant="20" id="4bm-mt-6RT"/>
+                            <constraint firstItem="HEq-Do-qGv" firstAttribute="bottom" secondItem="f7h-3K-KmN" secondAttribute="bottom" id="FAa-Zd-sds"/>
+                            <constraint firstItem="f7h-3K-KmN" firstAttribute="top" secondItem="fRv-eX-X9f" secondAttribute="bottom" constant="40" id="IVr-Ga-Qje"/>
+                            <constraint firstItem="XaF-rq-oey" firstAttribute="leading" secondItem="fRv-eX-X9f" secondAttribute="trailing" constant="20" id="Jzt-tg-iX9"/>
+                            <constraint firstItem="XaF-rq-oey" firstAttribute="baseline" secondItem="fRv-eX-X9f" secondAttribute="baseline" id="Nz6-NY-N3n"/>
+                            <constraint firstItem="eLx-Kj-cQQ" firstAttribute="leading" secondItem="HEq-Do-qGv" secondAttribute="leading" id="aGL-B4-uul"/>
+                            <constraint firstItem="fRv-eX-X9f" firstAttribute="top" secondItem="eLx-Kj-cQQ" secondAttribute="bottom" constant="20" id="hPe-aC-amR"/>
+                            <constraint firstItem="HEq-Do-qGv" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="XaF-rq-oey" secondAttribute="trailing" symbolic="YES" id="luA-q7-p4B"/>
+                            <constraint firstItem="HEq-Do-qGv" firstAttribute="trailing" secondItem="f7h-3K-KmN" secondAttribute="trailing" id="q0j-jn-Plq"/>
+                            <constraint firstItem="eLx-Kj-cQQ" firstAttribute="centerX" secondItem="ZJc-WL-7oy" secondAttribute="centerX" id="wff-PD-Ng5"/>
+                            <constraint firstItem="f7h-3K-KmN" firstAttribute="leading" secondItem="HEq-Do-qGv" secondAttribute="leading" id="wie-aT-FKc"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="HEq-Do-qGv"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Accounts" image="Account-off" selectedImage="Account-on" id="AZ0-1z-f2A"/>
+                    <connections>
+                        <outlet property="accountPageScrollView" destination="f7h-3K-KmN" id="Uqf-BG-ZLQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bvI-aZ-afd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="694" y="944"/>
+            <point key="canvasLocation" x="692.75362318840587" y="943.52678571428567"/>
         </scene>
         <!--Main Tab Bar Controller-->
         <scene sceneID="Bdg-Ps-16O">

@@ -13,12 +13,17 @@ class TransactionsViewController: UIViewController, UITableViewDataSource, UITab
     @IBOutlet weak var searchTextfield: UITextField!
     @IBOutlet weak var transactionTableView: UITableView!
     var listTransaction:[String]?
+    var listTransactionObject:[[String:String]]?
     override func viewDidLoad() {
         super.viewDidLoad()
         let searchIcon = UIImage(named: "Search")
         self.addTextFieldImage(textField: searchTextfield, imgIcon: searchIcon!)
         self.listTransaction = ["Transaction 1", "Trang saction 2","Bank transaction ","Shopping transaction"]
-        // Do any additional setup after loading the view.
+        
+        
+        self.listTransactionObject = [["title" :"Transaction 1", "amount":"100"]]
+        let nc = NotificationCenter.default
+        nc.addObserver(self, selector: #selector(updateTransaction(notification:)), name: Notification.Name("UpdateTransaction"), object: nil)
     }
     
     func addTextFieldImage(textField: UITextField, imgIcon : UIImage)  {
@@ -70,6 +75,16 @@ class TransactionsViewController: UIViewController, UITableViewDataSource, UITab
         let detailViewController = storyBoard.instantiateViewController(withIdentifier: "detailTransactionVC") as! DetailViewController
         detailViewController.titleTransaction = titleDetail
         self.navigationController?.pushViewController(detailViewController, animated: true)
+    }
+    
+    @objc func updateTransaction(notification: Notification){
+        if let item = notification.object as? [String:Any] {
+//            let indexItem = (item["index"] as String).integerValue
+            let indexItem =  Int(item["index"] as! String) ?? 0
+            let titleItem =  item["title"] as! String
+            self.listTransaction?[indexItem] = titleItem
+            transactionTableView.reloadData()
+        }
     }
 
 }

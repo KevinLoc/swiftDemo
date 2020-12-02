@@ -28,9 +28,20 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E54-hz-MtZ">
-                                <rect key="frame" x="44" y="233" width="195" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jj5-Mc-wmK">
+                                <rect key="frame" x="20" y="255" width="177" height="48"/>
+                                <color key="backgroundColor" red="0.0" green="0.81568627449999997" blue="0.62745098040000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="U0c-ci-s3H"/>
+                                    <constraint firstAttribute="width" constant="177" id="XHu-DE-oDl"/>
+                                </constraints>
+                                <state key="normal" title="Update"/>
+                                <connections>
+                                    <action selector="updateTransactionItem:" destination="OSa-Fb-zeu" eventType="touchUpInside" id="tzF-d8-WHa"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E54-hz-MtZ">
+                                <rect key="frame" x="20" y="214" width="374" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -40,7 +51,12 @@
                         <constraints>
                             <constraint firstItem="LC1-RP-Xhy" firstAttribute="top" secondItem="l4o-4v-K3H" secondAttribute="topMargin" constant="14" id="8j4-kb-7T6"/>
                             <constraint firstItem="goe-HK-eGc" firstAttribute="leading" secondItem="KIj-DD-GeZ" secondAttribute="leading" constant="20" id="R6O-5t-2rV"/>
+                            <constraint firstItem="Jj5-Mc-wmK" firstAttribute="top" secondItem="E54-hz-MtZ" secondAttribute="bottom" constant="20" id="TDG-IL-NuW"/>
+                            <constraint firstItem="E54-hz-MtZ" firstAttribute="top" secondItem="goe-HK-eGc" secondAttribute="bottom" constant="88.5" id="gIl-E0-5M2"/>
+                            <constraint firstItem="Jj5-Mc-wmK" firstAttribute="leading" secondItem="E54-hz-MtZ" secondAttribute="leading" id="iqU-Kf-5gY"/>
+                            <constraint firstItem="KIj-DD-GeZ" firstAttribute="trailing" secondItem="E54-hz-MtZ" secondAttribute="trailing" constant="20" id="khZ-AW-veA"/>
                             <constraint firstItem="goe-HK-eGc" firstAttribute="top" secondItem="LC1-RP-Xhy" secondAttribute="bottom" constant="8" id="mOR-lP-peY"/>
+                            <constraint firstItem="E54-hz-MtZ" firstAttribute="leading" secondItem="goe-HK-eGc" secondAttribute="leading" id="uP4-zo-R2u"/>
                             <constraint firstItem="LC1-RP-Xhy" firstAttribute="leading" secondItem="KIj-DD-GeZ" secondAttribute="leading" constant="14" id="vKi-CK-UbD"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="KIj-DD-GeZ"/>

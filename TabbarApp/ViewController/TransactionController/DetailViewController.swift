@@ -23,10 +23,16 @@ class DetailViewController: UIViewController {
         self.navigationController?.isNavigationBarHidden = true;
     }
     
-
+    
     @IBAction func goBackHomeController(_ sender: Any) {
         _ = navigationController?.popViewController(animated: true)
     }
     
-
+    @IBAction func updateTransactionItem(_ sender: Any) {
+        let item = ["title" :"Trans title update", "amount": "100", "index" : "0"]
+        let nc = NotificationCenter.default
+        nc.post(name: Notification.Name("UpdateTransaction"), object: item)
+        _ = navigationController?.popViewController(animated: true)
+    }
+    
 }
