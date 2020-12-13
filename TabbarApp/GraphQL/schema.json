@@ -1,0 +1,10 @@
+query LaunchListDemo {
+  launches {
+    cursor
+    hasMore
+    launches {
+      id
+      site
+    }
+  }
+}
