@@ -16,6 +16,6 @@ class ApolloConnect{
     let client: ApolloClient
     // 3
     init() {
-        client = ApolloClient(url: URL(string: "https://apollo-fullstack-tutorial.herokuapp.com")!)
+        client = ApolloClient(url: URL(string: "http://staging3c8594f3.nuggetappserver.com/graphql/")!)
     }
 }

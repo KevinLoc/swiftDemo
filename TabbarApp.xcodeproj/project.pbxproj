@@ -23,12 +23,15 @@
 		0A6FAFB42560C6410074ABF1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A6FAFB22560C6410074ABF1 /* Main.storyboard */; };
 		0A6FAFB62560C6420074ABF1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0A6FAFB52560C6420074ABF1 /* Assets.xcassets */; };
 		0A6FAFB92560C6420074ABF1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A6FAFB72560C6420074ABF1 /* LaunchScreen.storyboard */; };
+		0A70E8FA2586633700D5177C /* MainTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A70E8F92586633700D5177C /* MainTabBar.swift */; };
 		0A79777A2574A01F00135C8B /* AccountView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A7977792574A01F00135C8B /* AccountView.xib */; };
 		0A79777C2574A0F100135C8B /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A79777B2574A0F100135C8B /* AccountViewController.swift */; };
 		0A79777E2574D0F900135C8B /* AccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A79777D2574D0F900135C8B /* AccountView.swift */; };
 		0AD68DBD257F2AEA00519093 /* LaunchList.graphql in Resources */ = {isa = PBXBuildFile; fileRef = 0AD68DBC257F2AEA00519093 /* LaunchList.graphql */; };
 		0AD68DBF257F2F3500519093 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD68DBE257F2F3500519093 /* API.swift */; };
 		0AD68DC3257F2FF100519093 /* ApolloConnect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD68DC2257F2FF100519093 /* ApolloConnect.swift */; };
+		0ADD7C6F258C677A00441CF8 /* HomeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0ADD7C6E258C677A00441CF8 /* HomeView.xib */; };
+		0ADD7C73258C76AB00441CF8 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ADD7C72258C76AB00441CF8 /* HomeView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,12 +51,15 @@
 		0A6FAFB52560C6420074ABF1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0A6FAFB82560C6420074ABF1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0A6FAFBA2560C6420074ABF1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0A70E8F92586633700D5177C /* MainTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBar.swift; sourceTree = "<group>"; };
 		0A7977792574A01F00135C8B /* AccountView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AccountView.xib; sourceTree = "<group>"; };
 		0A79777B2574A0F100135C8B /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
 		0A79777D2574D0F900135C8B /* AccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountView.swift; sourceTree = "<group>"; };
 		0AD68DBC257F2AEA00519093 /* LaunchList.graphql */ = {isa = PBXFileReference; lastKnownFileType = text; path = LaunchList.graphql; sourceTree = "<group>"; };
 		0AD68DBE257F2F3500519093 /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		0AD68DC2257F2FF100519093 /* ApolloConnect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApolloConnect.swift; sourceTree = "<group>"; };
+		0ADD7C6E258C677A00441CF8 /* HomeView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeView.xib; sourceTree = "<group>"; };
+		0ADD7C72258C76AB00441CF8 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,12 +133,14 @@
 		0A6FAFAB2560C6410074ABF1 /* TabbarApp */ = {
 			isa = PBXGroup;
 			children = (
+				0ADD7C6D258C674F00441CF8 /* View */,
 				0AD68DBB257F2ABB00519093 /* GraphQL */,
 				0A32581725681C2100441761 /* ViewController */,
 				0A3258142568158D00441761 /* TableViewCell */,
 				0A55E6752566A680008520BB /* DataModel */,
 				0A6FAFAC2560C6410074ABF1 /* AppDelegate.swift */,
 				0A6FAFAE2560C6410074ABF1 /* SceneDelegate.swift */,
+				0A70E8F92586633700D5177C /* MainTabBar.swift */,
 				0A6FAFB22560C6410074ABF1 /* Main.storyboard */,
 				0A6FAFB52560C6420074ABF1 /* Assets.xcassets */,
 				0A6FAFB72560C6420074ABF1 /* LaunchScreen.storyboard */,
@@ -159,6 +167,15 @@
 				0A36959F257DE2B900A4F985 /* schema.json */,
 			);
 			path = GraphQL;
+			sourceTree = "<group>";
+		};
+		0ADD7C6D258C674F00441CF8 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0ADD7C72258C76AB00441CF8 /* HomeView.swift */,
+				0ADD7C6E258C677A00441CF8 /* HomeView.xib */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -228,6 +245,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0A6FAFB92560C6420074ABF1 /* LaunchScreen.storyboard in Resources */,
+				0ADD7C6F258C677A00441CF8 /* HomeView.xib in Resources */,
 				0A6FAFB62560C6420074ABF1 /* Assets.xcassets in Resources */,
 				0A79777A2574A01F00135C8B /* AccountView.xib in Resources */,
 				0AD68DBD257F2AEA00519093 /* LaunchList.graphql in Resources */,
@@ -267,6 +285,8 @@
 			files = (
 				0A6FAFAD2560C6410074ABF1 /* AppDelegate.swift in Sources */,
 				0A55E6812566A9C8008520BB /* HomeController.swift in Sources */,
+				0A70E8FA2586633700D5177C /* MainTabBar.swift in Sources */,
+				0ADD7C73258C76AB00441CF8 /* HomeView.swift in Sources */,
 				0A55E67D2566A824008520BB /* Product.swift in Sources */,
 				0A06610025696B5900A9B4D5 /* TransactionCell.swift in Sources */,
 				0A79777E2574D0F900135C8B /* AccountView.swift in Sources */,
