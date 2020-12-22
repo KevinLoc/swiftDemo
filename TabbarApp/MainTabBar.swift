@@ -28,9 +28,9 @@ class MainTabBar: UITabBar {
         self.shapeLayer = shapeLayer
     }
 
-    override func draw(_ rect: CGRect) {
-        self.addShape()
-    }
+//    override func draw(_ rect: CGRect) {
+//        self.addShape()
+//    }
 
     func createPath() -> CGPath {
 

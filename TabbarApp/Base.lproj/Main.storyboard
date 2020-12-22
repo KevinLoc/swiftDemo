@@ -7,10 +7,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Login Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TabbarApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="LoginController" customModule="TabbarApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -45,6 +45,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
+                                    <action selector="loginNugget:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WiZ-kf-XeB"/>
                                     <segue destination="yux-1z-uhg" kind="show" animates="NO" id="d66-XP-pTO"/>
                                 </connections>
                             </button>
@@ -74,6 +75,10 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="xbh-fL-HRN"/>
+                    <connections>
+                        <outlet property="passwordTextfield" destination="ZTi-mg-vDJ" id="4MT-Wm-aYd"/>
+                        <outlet property="usernameTextfield" destination="qbk-8c-xwh" id="cVe-f6-jFc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -123,7 +128,7 @@
                                         <state key="normal" image="Filter"/>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstItem="bRN-Iw-K78" firstAttribute="top" secondItem="OUb-GI-ZCE" secondAttribute="top" constant="8" id="8vH-ar-Pio"/>
                                     <constraint firstItem="PO6-5b-aVn" firstAttribute="leading" secondItem="bRN-Iw-K78" secondAttribute="trailing" constant="8" id="APo-fu-YTx"/>
@@ -311,7 +316,7 @@
             <objects>
                 <tabBarController id="yux-1z-uhg" customClass="MainTabBarController" customModule="TabbarApp" customModuleProvider="target" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="ryt-yI-Uaz"/>
-                    <tabBar key="tabBar" opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="qzP-Nw-qaY" customClass="MainTabBar" customModule="TabbarApp" customModuleProvider="target">
+                    <tabBar key="tabBar" opaque="NO" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="qzP-Nw-qaY" customClass="MainTabBar" customModule="TabbarApp" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -360,7 +365,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="u6T-4V-nEO"/>
                     </view>
-                    <tabBarItem key="tabBarItem" enabled="NO" title="" id="7o9-35-5xW"/>
+                    <tabBarItem key="tabBarItem" title="" id="7o9-35-5xW"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fgb-jo-XLv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

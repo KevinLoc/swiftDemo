@@ -20,14 +20,14 @@ class HomeController: UIViewController, UITableViewDataSource, UITableViewDelega
           Product(name: "SMRT ", cellImageName: "History-on", desc: "phone-fullscreen3"),
           Product(name: "Bycicle", cellImageName: "Home-on", desc: "phone-fullscreen4")
         ]
-        ApolloConnect.shared.client.fetch(query: LaunchListQuery()) { result in
-          switch result {
-          case .success(let graphQLResult):
-            print("Success! Result: \(graphQLResult)")
-          case .failure(let error):
-            print("Failure! Error: \(error)")
-          }
-        }
+//        ApolloConnect.shared.client.fetch(query: BankAccountsUserQuery()) { result in
+//          switch result {
+//          case .success(let graphQLResult):
+//            print(graphQLResult.data ?? [])
+//          case .failure(let error):
+//            print("Failure! Error: \(error)")
+//          }
+//        }
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return  products!.count 

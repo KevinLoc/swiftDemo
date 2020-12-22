@@ -10,12 +10,23 @@ import Foundation
 import Apollo
 
 class ApolloConnect{
-    // 1
     static let shared = ApolloConnect()
-    // 2
     let client: ApolloClient
-    // 3
     init() {
-        client = ApolloClient(url: URL(string: "http://staging3c8594f3.nuggetappserver.com/graphql/")!)
+        client = {
+            let configuration = URLSessionConfiguration.default
+            let token = UserDefaults.standard.value(forKey: "token")
+            if(token != nil){
+                configuration.httpAdditionalHeaders = ["Content-Type":"application/json", "Authorization":"jwt \(token!)"]
+            }
+            else{
+                 configuration.httpAdditionalHeaders = ["Content-Type":"application/json"]
+            }
+           
+            let url = URL(string: "http://staging3c8594f3.nuggetappserver.com/graphql/")!
+            return ApolloClient(
+                networkTransport: HTTPNetworkTransport( url: url,  session: URLSession(configuration: configuration))
+            )
+        }()
     }
 }

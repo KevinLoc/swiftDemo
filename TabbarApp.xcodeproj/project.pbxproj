@@ -13,7 +13,6 @@
 		0A3258192568290800441761 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A3258182568290800441761 /* DetailViewController.swift */; };
 		0A36959A257DDEA600A4F985 /* Apollo in Frameworks */ = {isa = PBXBuildFile; productRef = 0A369599257DDEA600A4F985 /* Apollo */; };
 		0A36959C257DDEA600A4F985 /* ApolloWebSocket in Frameworks */ = {isa = PBXBuildFile; productRef = 0A36959B257DDEA600A4F985 /* ApolloWebSocket */; };
-		0A3695A0257DE2B900A4F985 /* schema.json in Resources */ = {isa = PBXBuildFile; fileRef = 0A36959F257DE2B900A4F985 /* schema.json */; };
 		0A4314092562C3E400CE7101 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A4314082562C3E400CE7101 /* MainTabBarController.swift */; };
 		0A550912256C02B500724695 /* DetailTransaction.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A550911256C02B500724695 /* DetailTransaction.storyboard */; };
 		0A55E67D2566A824008520BB /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A55E67C2566A824008520BB /* Product.swift */; };
@@ -32,6 +31,7 @@
 		0AD68DC3257F2FF100519093 /* ApolloConnect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD68DC2257F2FF100519093 /* ApolloConnect.swift */; };
 		0ADD7C6F258C677A00441CF8 /* HomeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0ADD7C6E258C677A00441CF8 /* HomeView.xib */; };
 		0ADD7C73258C76AB00441CF8 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ADD7C72258C76AB00441CF8 /* HomeView.swift */; };
+		0ADD7CBF258CBA4600441CF8 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ADD7CBE258CBA4600441CF8 /* LoginController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,7 +39,6 @@
 		0A0660FF25696B5900A9B4D5 /* TransactionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionCell.swift; sourceTree = "<group>"; };
 		0A325815256815B600441761 /* ProductCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCell.swift; sourceTree = "<group>"; };
 		0A3258182568290800441761 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
-		0A36959F257DE2B900A4F985 /* schema.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = schema.json; sourceTree = "<group>"; };
 		0A4314082562C3E400CE7101 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		0A550911256C02B500724695 /* DetailTransaction.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DetailTransaction.storyboard; sourceTree = "<group>"; };
 		0A55E67C2566A824008520BB /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
@@ -60,6 +59,7 @@
 		0AD68DC2257F2FF100519093 /* ApolloConnect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApolloConnect.swift; sourceTree = "<group>"; };
 		0ADD7C6E258C677A00441CF8 /* HomeView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeView.xib; sourceTree = "<group>"; };
 		0ADD7C72258C76AB00441CF8 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		0ADD7CBE258CBA4600441CF8 /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +93,7 @@
 				0A55E6802566A9C8008520BB /* HomeController.swift */,
 				0A4314082562C3E400CE7101 /* MainTabBarController.swift */,
 				0A79777B2574A0F100135C8B /* AccountViewController.swift */,
+				0ADD7CBE258CBA4600441CF8 /* LoginController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -164,7 +165,6 @@
 				0AD68DC2257F2FF100519093 /* ApolloConnect.swift */,
 				0AD68DBE257F2F3500519093 /* API.swift */,
 				0AD68DBC257F2AEA00519093 /* LaunchList.graphql */,
-				0A36959F257DE2B900A4F985 /* schema.json */,
 			);
 			path = GraphQL;
 			sourceTree = "<group>";
@@ -250,7 +250,6 @@
 				0A79777A2574A01F00135C8B /* AccountView.xib in Resources */,
 				0AD68DBD257F2AEA00519093 /* LaunchList.graphql in Resources */,
 				0A6FAFB42560C6410074ABF1 /* Main.storyboard in Resources */,
-				0A3695A0257DE2B900A4F985 /* schema.json in Resources */,
 				0A550912256C02B500724695 /* DetailTransaction.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -296,6 +295,7 @@
 				0A79777C2574A0F100135C8B /* AccountViewController.swift in Sources */,
 				0A6FAFAF2560C6410074ABF1 /* SceneDelegate.swift in Sources */,
 				0A0660FE25695D9D00A9B4D5 /* TransactionsViewController.swift in Sources */,
+				0ADD7CBF258CBA4600441CF8 /* LoginController.swift in Sources */,
 				0AD68DBF257F2F3500519093 /* API.swift in Sources */,
 				0A3258192568290800441761 /* DetailViewController.swift in Sources */,
 			);
