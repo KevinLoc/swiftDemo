@@ -17,5 +17,8 @@ class HomeView: UIView {
         // Drawing code
     }
     */
-
+    @IBAction func closePopup(_ sender: Any) {
+        self.removeFromSuperview();
+    }
+    
 }

@@ -18,13 +18,12 @@ class MainTabBarController: UITabBarController {
 //        button.setTitle("Nugget", for: .normal)
 //        button.setTitleColor(.black, for: .normal)
 //        button.setTitleColor(.yellow, for: .highlighted)
-//        button.backgroundColor = .orange
+        button.backgroundColor = .orange
         button.layer.cornerRadius = 32
         button.layer.borderWidth = 1
         button.layer.borderColor = UIColor.gray.cgColor
-//        button.addTarget(self, action: #selector(self.showPopupView), for: UIControl.Event.touchUpInside)
-        
-//        self.view.insertSubview(button, aboveSubview: self.tabBar)
+        button.addTarget(self, action: #selector(self.showPopupView), for: UIControl.Event.touchUpInside)
+        self.view.insertSubview(button, aboveSubview: self.tabBar)
     }
     
     override func viewWillAppear(_ animated: Bool) {
