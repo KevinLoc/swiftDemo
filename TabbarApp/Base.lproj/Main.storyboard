@@ -97,6 +97,9 @@
                                     <constraint firstAttribute="width" constant="40" id="WOT-XC-SH8"/>
                                 </constraints>
                                 <state key="normal" image="Menu"/>
+                                <connections>
+                                    <action selector="showMenu:" destination="kTU-XE-rcx" eventType="touchUpInside" id="WGh-Au-5Dp"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Transaction history" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eWE-tJ-cDS">
                                 <rect key="frame" x="54" y="50" width="163" height="40"/>

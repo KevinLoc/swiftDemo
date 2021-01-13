@@ -9,7 +9,6 @@
 import UIKit
 
 class TransactionsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate  {
-
     @IBOutlet weak var searchTextfield: UITextField!
     @IBOutlet weak var transactionTableView: UITableView!
     var listTransaction:[String]?
@@ -79,12 +78,22 @@ class TransactionsViewController: UIViewController, UITableViewDataSource, UITab
     
     @objc func updateTransaction(notification: Notification){
         if let item = notification.object as? [String:Any] {
-//            let indexItem = (item["index"] as String).integerValue
+            //            let indexItem = (item["index"] as String).integerValue
             let indexItem =  Int(item["index"] as! String) ?? 0
             let titleItem =  item["title"] as! String
             self.listTransaction?[indexItem] = titleItem
             transactionTableView.reloadData()
         }
     }
+    
+    @IBAction func showMenu(_ sender: Any) {
+        
+        if let menuView = Bundle.main.loadNibNamed("MenuView", owner:
+            self, options: nil)?.first as? MenuView, let tabbar = self.tabBarController {
+            menuView.backgroundColor = UIColor.init(red: 1/255, green: 1/255, blue: 1/255, alpha: 0.7)
 
+            tabbar.view.addSubview(menuView)
+        }
+
+    }
 }

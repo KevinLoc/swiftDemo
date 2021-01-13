@@ -15,9 +15,9 @@ class MainTabBarController: UITabBarController {
         
         // Do any additional setup after loading the view.
         button.setImage(UIImage(named: "Home-on.png"), for: .normal)
-//        button.setTitle("Nugget", for: .normal)
-//        button.setTitleColor(.black, for: .normal)
-//        button.setTitleColor(.yellow, for: .highlighted)
+        //        button.setTitle("Nugget", for: .normal)
+        //        button.setTitleColor(.black, for: .normal)
+        //        button.setTitleColor(.yellow, for: .highlighted)
         button.backgroundColor = .orange
         button.layer.cornerRadius = 32
         button.layer.borderWidth = 1
@@ -44,11 +44,11 @@ class MainTabBarController: UITabBarController {
     }
     
     @objc func showPopupView (){
-//        let popupView:UIView = UIView.init(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.size.width, height: UIScreen.main.bounds.size.height))
-//        popupView.backgroundColor = UIColor.red;
-//        if let window = UIApplication.shared.windows.first {
-//            window.addSubview(popupView);
-//        }
+        //        let popupView:UIView = UIView.init(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.size.width, height: UIScreen.main.bounds.size.height))
+        //        popupView.backgroundColor = UIColor.red;
+        //        if let window = UIApplication.shared.windows.first {
+        //            window.addSubview(popupView);
+        //        }
         let popupView = Bundle.main.loadNibNamed("HomeView", owner:
             self, options: nil)?.first as? HomeView
         popupView?.backgroundColor = UIColor.white;

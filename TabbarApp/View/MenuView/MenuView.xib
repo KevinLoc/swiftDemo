@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="MenuView" customModule="TabbarApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pUs-pL-PWC">
+                    <rect key="frame" x="10" y="54" width="162" height="198"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pyr-cd-wAg">
+                            <rect key="frame" x="61.5" y="61" width="39" height="30"/>
+                            <state key="normal" title="Close"/>
+                            <connections>
+                                <action selector="hideMenu:" destination="iN0-l3-epB" eventType="touchUpInside" id="1Ef-Sg-wRE"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstItem="pyr-cd-wAg" firstAttribute="top" secondItem="pUs-pL-PWC" secondAttribute="top" constant="61" id="0Fn-JR-YJC"/>
+                        <constraint firstItem="pyr-cd-wAg" firstAttribute="centerX" secondItem="pUs-pL-PWC" secondAttribute="centerX" id="h2i-9w-wcl"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="pUs-pL-PWC" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="10" id="E18-0x-obY"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="pUs-pL-PWC" secondAttribute="bottom" constant="610" id="Py1-UR-e3e"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="pUs-pL-PWC" secondAttribute="trailing" constant="242" id="fvi-ho-FKv"/>
+                <constraint firstItem="pUs-pL-PWC" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="10" id="pNB-Vn-lun"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="131.8840579710145" y="111.83035714285714"/>
+        </view>
+    </objects>
+</document>
